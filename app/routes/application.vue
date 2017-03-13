@@ -2,7 +2,7 @@
   <div class="app">
     <nav class="nav">
       <div class="nav-left">
-        <a class="nav-item">
+        <a class="nav-item is-brand">
           Puppies
         </a>
     </div>
@@ -11,10 +11,10 @@
   <!-- This "nav-menu" is hidden on mobile -->
   <!-- Add the modifier "is-active" to display it on mobile -->
   <div class="nav-right">
-    <a class="nav-item">
+    <a class="nav-item" href="index">
       All Puppies
     </a>
-    <a class="nav-item">
+    <a class="nav-item" href="new">
       Add Puppy
     </a>
   </div>
@@ -36,7 +36,7 @@
               </div>
                 <div class="media-right">
                   <p class="subtitle">Name</p>
-                  <p class="subtitle">Read More</p>
+                  <a href="detail">Read More</a>
                 </div>
               </div>
             <!-- panel-2 -->
@@ -48,7 +48,7 @@
               </div>
                 <div class="media-right">
                   <p class="subtitle">Name</p>
-                  <p class="subtitle">Read More</p>
+                  <a href="detail">Read More</a>
                 </div>
               </div>
             <!-- panel-3 -->
@@ -60,18 +60,15 @@
               </div>
                 <div class="media-right">
                   <p class="subtitle">Name</p>
-                  <p class="subtitle">Read More</p>
+                  <a href="detail">Read More</a>
                 </div>
               </div>
             </div>
           </nav>
           <div class="column is-two-thirds">
-            <table class="table">
-              <p class="title">Puppies for Adoption</p>
-              <tr class=""></tr>
-            </table>
+            <router-view></router-view>
           </div>
-      </div> <!--columns -->
+        </div> <!--columns -->
       </div>
     </div>
   </div>
