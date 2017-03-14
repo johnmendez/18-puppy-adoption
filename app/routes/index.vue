@@ -21,12 +21,15 @@
       <tbody>
         <td>Name</td>
         <td>Age</td>
-        <td><a href="#">Read More</a></td>
+        <td><a href="#" class="is-primary">Read More</a></td>
       </tbody>
     </table>
-
-      <h1 class="puppy-header">Adopted Puppies</h1>
-    <table class="table is-striped is-narrow">
+    <div class="level">
+      <div class="level-left">
+    <p class="title level-item">Adopted Puppies</p>
+  </div>
+  </div>
+    <table class="table">
       <thead>
         <tr>
           <th>Name</th>
@@ -37,7 +40,17 @@
       <tbody>
         <td>Name</td>
         <td>Age</td>
-        <td><a href="#">Read More</a></td>
+        <td><a href="#" class="is-primary">Read More</a></td>
+      </tbody>
+      <tbody>
+        <td>Name</td>
+        <td>Age</td>
+        <td><a href="#" class="is-primary">Read More</a></td>
+      </tbody>
+      <tbody>
+        <td>Name</td>
+        <td>Age</td>
+        <td><a href="#" class="is-primary">Read More</a></td>
       </tbody>
     </table>
   </div>

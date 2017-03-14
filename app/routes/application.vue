@@ -36,7 +36,7 @@
               </div>
                 <div class="media-right">
                   <p class="subtitle">Name</p>
-                  <a href="detail">Read More</a>
+                  <a href="detail" class="is-primary">Read More</a>
                 </div>
               </div>
             <!-- panel-2 -->
@@ -48,7 +48,7 @@
               </div>
                 <div class="media-right">
                   <p class="subtitle">Name</p>
-                  <a href="detail">Read More</a>
+                  <a href="detail" class="is-primary">Read More</a>
                 </div>
               </div>
             <!-- panel-3 -->
@@ -60,7 +60,7 @@
               </div>
                 <div class="media-right">
                   <p class="subtitle">Name</p>
-                  <a href="detail">Read More</a>
+                  <a href="detail" class="is-primary">Read More</a>
                 </div>
               </div>
             </div>
