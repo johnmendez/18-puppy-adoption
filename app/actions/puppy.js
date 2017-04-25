@@ -18,3 +18,28 @@ export function findAll() {
       // Dispatch findAllComplete with the data sent by the server
     .then(puppies => dispatch(findAllComplete(puppies)));
 }
+
+
+// Export a named createComplete function that returns an action object for PUPPY@CREATE_COMPLETE
+export function createComplete(data = []) {
+  return {
+    type: 'PUPPY@CREATE_COMPLETE',
+    data,
+  };
+}
+
+
+// Export a named create function that takes in an argument formData and returns a thunk
+export function create(formData) {
+   //  Make a POST request to the apiUrl with headers, and JSON stringified body
+  return dispatch => fetch(apiUrl, {
+    method: 'POST',
+    headers: jsonHeaders,
+    body: JSON.stringify(formData),
+     //  Parse json from the server response
+  }).then(parseJson)
+   .then((puppy) => {
+     //  Dispatch createComplete with the data sent by the server
+     dispatch(createComplete(puppy));
+   });
+}

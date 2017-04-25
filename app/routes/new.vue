@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="">
-    <div class="title">Found a Pupper? We Can Help!</div>
+    <h2 class="title">Found a Pupper? We Can Help!</h2>
     <!-- Create a form to take inputs for: (binding v-model to properties on formValues) -->
+    <form @submit.prevent="submit" class="puppy-form" >
      <!-- Name (name on the server) -->
     <label class="label" v-model="formValues.name">Name</label>
     <p class="control">
@@ -44,10 +45,13 @@
     </p>
     <a class="button">Back</a>
     <a class="button is-primary">Submit</a>
+  </form>
   </div>
 </template>
 
 <script>
+import store from '../store';
+import { create } from '../actions/puppy';
 export default {
   data() {
     return {
@@ -65,7 +69,14 @@ export default {
   },
 
   methods: {
-
+    // Add an action handler for when the add form is submitted
+    submit() {
+      // When submitted, dispatch create with the form data from the current component to the store
+      store.dispatch(create(this.formValues)).then(() => {
+        // When the store is finished dispatching Redirect to the index page
+        this.$router.push({ name: 'index' });
+      });
+    },
   },
 };
 </script>
