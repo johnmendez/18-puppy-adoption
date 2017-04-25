@@ -28,7 +28,7 @@
 
             <!-- Update sidebar to loop through puppies -->
             <!-- Show individual puppy within the loop -->
-            <div class="panel-block">
+            <div class="panel-block" v-for="puppy in puppies">
               <div class="media">
                 <div class="media-left">
                   <span class="image is-64x64 is-square">
@@ -47,17 +47,7 @@
                   <router-link class="is-primary" :to="{ name: 'detail', params: { id: puppy.id } }">Read More</router-link>
                 </div>
               </div>
-            <div class="panel-block">
-              <div class="media">
-                <div class="media-left">
-                  <img src="http://placehold.it/100x100" alt="">
-                </div>
-              </div>
-                <div class="media-right">
-                  <p class="subtitle">Name</p>
-                  <a href="detail" class="is-primary">Read More</a>
-                </div>
-              </div>
+
           </nav>
         </div>
 
