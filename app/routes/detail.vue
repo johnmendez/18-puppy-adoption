@@ -74,8 +74,9 @@ export default {
     };
   },
   // When the detail page mounts, dispatch findOne with the id parameter from the current route
-  mounted() {
+  created() {
     store.dispatch(findOne(this.$route.params.id));
+    this.getPuppy();
   },
   //  Add a watch object to the component that says to watch the puppies property for changes and run a method called getPuppy
   watch: {
@@ -86,7 +87,7 @@ export default {
  // Set the value of currentPuppy to the result of using find to find where the puppy id is equal to the id parameter in the route
   methods: {
     getPuppy() {
-      this.currentPuppy = this.puppies.find(puppy => puppy.id === this.$route.params.id);
+      this.currentPuppy = this.puppies.find(puppy => puppy.id == this.$route.params.id);
     },
     // Create an adopt method that dispatches the toggleAdopted action creator and passes in this.currentPuppy
     adopt() {
